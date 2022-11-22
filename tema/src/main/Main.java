@@ -22,6 +22,7 @@ public final class Main {
     /**
      * for coding style
      */
+
     private Main() {
     }
 
