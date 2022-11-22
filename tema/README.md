@@ -1,44 +1,37 @@
 
 
-# Tema POO  - GwentStone
+# Tema1 POO  - GwentStone
 
-<div align="center"><img src="https://tenor.com/view/witcher3-gif-9340436.gif" width="500px"></div>
+<div align=>Student: Bogdan Alexandra-Lacramioara</div>
+<div align=>Student: Grupa: 325CD</div>
 
-#### Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/tema](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/tema)
+Punctul de plecare al acestui joc a fost sa inteleg cu ce il modelam, asadar fiecare joc are tabla sau masa de joc si jucatorii, fiecare jucator avand pachetul si cartile din acesta.
 
+## Cartile
+*    In acest joc exista mai multe tipuri de carți asignate unui  jucator , mai exact un jucator poate avea o carte de tipul Minion sau o carte de tipul Environment. De asemenea, fiecare jucator va avea o carte speciala de tipul Hero care il va reprezenta in joc.
+* Asadar, clasa Card contine atributele comune acestor tipuri: mana, description, colors si name.
+* Insa fiecare tip de carte contine alte carti care fac parte din tiparele lor.
+*    Asadar pentru fiecare tip de carte cream o clasa, din care derivam (extindem) fiecare carte din tiparul clasei respective. 
+*    Pentru cartea de tip Minion se poate observa ca nu am creat clasa propriu-zisa Minion, ci StandardMinionCard si SpecialMinionCard, deoarece avem 2 tipuri de carti Minion si asa e mai usor sa le manevram.
 
-## Skel Structure
+## Jucatorii
+* Dupa cum stim fiecare jucator are mai multe pachete, prima lui sarcina fiind sa aleaga cu ce pachet incepe. Deci in clasa Player am implementat metodele prin care jucatorul isi alege pachetul de carti si in care i se atribuie eroul. Tot in interiorul acestei clase avem si metodele prin care se modeleaza mana fiecarui jucator.
 
-* src/
-  * checker/ - checker files
-  * fileio/ - contains classes used to read data from the json files
-  * main/
-      * Main - the Main class runs the checker on your implementation. Add the entry point to your implementation in it. Run Main to test your implementation from the IDE or from command line.
-      * Test - run the main method from Test class with the name of the input file from the command line and the result will be written
-        to the out.txt file. Thus, you can compare this result with ref.
-* input/ - contains the tests in JSON format
-* ref/ - contains all reference output for the tests in JSON format
+## Decks/ Pachetele de carti 
 
-## Tests
+* Pentru ca fiecare jucator are nevoie de un pachet de carti, in clasa Deck il cream si il pregatim pentru joc.
 
-1. test01_game_start - 3p
-2. test02_place_card - 4p
-3. test03_place_card_invalid - 4p
-4. test04_use_env_card - 4p
-5. test05_use_env_card_invalid - 4p
-6. test06_attack_card - 4p
-7. test07_attack_card_invalid - 4p
-8. test08_use_card_ability - 4p
-9. test09_use_card_ability_invalid -4p
-10. test10_attack_hero - 4p
-11. test11_attack_hero_invalid - 4p
-12. test12_use_hero_ability_1 - 4p
-13. test13_use_hero_ability_2 - 4p
-14. test14_use_hero_ability_1_invalid - 4p
-15. test15_use_hero_ability_2_invalid - 4p
-16. test16_multiple_games_valid - 5p
-17. test17_multiple_games_invalid - 6p
-18. test18_big_game - 10p
+## Tratarea jocului
+* Pregatirea si inceperea jocului se fac in clasa GwentStone, dupa modul in care ne este specificat in enunt.
+* Functionarea efectiva a jocului se realizeaza prin metoda play.
+
+## Tratarea Task-urilor
+* Fiecare comanda pe care o primim in input se trateaza in clasa Action.
+
+## Ce a fost cel mai greu?
+* Ei bine, pentru mine, care va spun sincer nu sunt fan jocuri pe calculator, a fost sa inteleg exact modul de "lucru" al jocului.
+* Una dintre problemele intampinate a fost la cartile Minion, deoarece avem 2 tipuri de acest tip. La inceput am facut doar o clasa Minion, ulterior mi-am dat seama ca doar mi-as ingreuna munca urmand  metoda aceasta.
 
 
-<div align="center"><img src="https://tenor.com/view/homework-time-gif-24854817.gif" width="500px"></div>
+
+## Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/tema](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/tema)
